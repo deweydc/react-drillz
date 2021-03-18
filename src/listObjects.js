@@ -1,6 +1,6 @@
 
 
-export const list = [
+export const List = [
     {
         id: 0,
         style: 'nike',
@@ -21,7 +21,7 @@ export const list = [
     },
     {
         id: 3,
-        style: 'nike',
+        style: 'vans',
         type: 'shirt',
         color: 'black'
     },

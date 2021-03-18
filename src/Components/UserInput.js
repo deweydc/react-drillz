@@ -1,27 +1,19 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react';
 
-export default class userInput extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            userInput: ''
-        };
-    }
+export default function UserInput() {
 
-    handleChange = e => {
-        this.setState({userInput: e.target.value})
-    }
+    const [userInput, setUserInput] = useState('');
 
-    render() {
 
-        return (
-            <div>
-                <h1>Set 1 - State, Class Methods, Capturing User Input, Mapping, Axios</h1>
-                <input type="text" onChange={this.handleChange} />
-                <p>{this.state.userInput}</p>
-            </div>
-        )
-    }
+    return (
+        <div style={{ border: '1px solid black', margin: '20px' }}>
+            <h2>User Input => Output</h2>
+            <p>This will take a user input and render output on screen</p>
+            <input style={{ display: 'flex', alignItems: 'center' }} type="text" onChange={(e) => setUserInput(e.target.value)} />
+            <h1>{userInput}</h1>
+        </div>
+    )
 }
+
 

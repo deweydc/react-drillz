@@ -1,5 +1,5 @@
 import React from 'react';
-import { list } from '../listObjects';
+import { List } from '../listObjects';
 
 const styleOne = {
     border: '1px solid black',
@@ -9,22 +9,27 @@ const styleOne = {
 const display = {
     listStyleType: "none",
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'left',
+    margin: 0,
+    padding: 0
 }
 
 const listItem = {
-    padding: 10, 
+    padding: 5,
     fontWeight: 700,
-    color: 'green'
+    color: 'green',
+    marginTop: 0,
+    paddingTop: 0
 }
 
 export default function UserInputOutput2() {
     return (
-        <div style={styleOne}>
-            <h1>App #2 Attempt 2</h1>
+        <div style={{ border: '1px solid black', margin: '20px' }}>
+            <h2>Mapping List</h2>
+            <p>Maps a list of items from a object in another file</p>
             <div style={display}>
-                {list.map(item => 
-                <h1 style={listItem} key={item.id}>{item.style}</h1>)}
+                {List.map(item =>
+                    <h1 style={listItem} key={item.id}>{item.style}</h1>)}
             </div>
         </div>
     );
